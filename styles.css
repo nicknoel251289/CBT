@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* set font-size base to 10px. 1 REM === 10px */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 3rem;
+    min-height: 100vh;
+    -webkit-box-shadow: 0px 3px 6px 1px rgba(0,0,0,0.61);
+    -moz-box-shadow: 0px 3px 6px 1px rgba(0,0,0,0.61);
+    box-shadow: 0px 3px 6px 1px rgba(0,0,0,0.61);
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 6.4rem;
+    background-color: #e0e0e0;
+    padding: 0 2rem;
+}
+.user_name_container {
+    padding-right: 5rem;
+}
+.welcome {
+   font-weight: bold;
+   font-size: 2rem; 
+}
+.current_time_container {
+    display: flex;
+    justify-content: space-evenly;
+}
+#current_time, #time_zone {
+    font-size: 3rem;
+}
+#city_table {
+    font-size: 2rem;
+    text-align: center;
+    width: 100% !important;
+    padding-top: 3rem;
+}
+#city_table td {
+    color: #666666;
+}
+#city_table_length select {
+    height: 3.5rem;
+    border-radius: 3px;
+    border: 1px solid #999999;
+}
+#city_table_length label, #city_table_filter label {
+    font-size: 1.2rem;
+}
+#city_table_info,
+#city_table_next,
+#city_table_previous {
+    font-size: 1.2rem;
+}
+#city_table_info,
+#city_table_paginate {
+    padding-top: 2rem;
+}
+
+
+#city_form {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+.input_container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    background: #f4f7f8;
+	margin: 10px auto;
+	padding: 20px;
+}
+input {
+    height: 3.5rem;
+    width: 28rem;
+    border-radius: 3px;
+    border: 1px solid #999999;
+    margin: .5rem;
+}
+#city_state::placeholder,
+#city_density::placeholder {
+    position: relative;
+    left: 1rem;
+}
+#add_to_table {
+    position: relative;
+	display: block;
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	margin: 0 auto;
+	background: #1abc9c;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border: 1px solid #16a085;
+	border-width: 1px 1px 3px;
+	margin-bottom: 10px;
+}
+.paginate_button.current {
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 2rem;
+    }
+    nav {
+        justify-content: center;
+        flex-flow: column;
+    }
+    .user_name_container, .current_time_container {
+        text-align: center;
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 800px) {
+   
+    #city_form {
+        width: 100%;
+    }
+}
